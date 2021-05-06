@@ -58,16 +58,16 @@ test {
 }
 
 asciidoctor {
-    sourceDir = file("${buildDir}/openapi")
+    sourceDir = file("${projectDir}/src/main/resources/static/openapi")
 }
 
 asciidoctorPdf {
-    sourceDir = file("${buildDir}/openapi")
+    sourceDir = file("${projectDir}/src/main/resources/static/openapi")
 }
 
 openApiGenerate {
     generatorName = "asciidoc"
-    inputSpec = "${buildDir}/openapi/openapi.json"
+    inputSpec = "${projectDir}/src/main/resources/static/openapi/openapi.json"
     outputDir = "${buildDir}/openapi"
     validateSpec = true
 }
