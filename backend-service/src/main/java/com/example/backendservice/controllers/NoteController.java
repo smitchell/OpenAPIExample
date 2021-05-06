@@ -60,7 +60,7 @@ public class NoteController {
         )
         @GetMapping("/api/note/{id}")
         public Note getNote(
-                @Parameter(description = "${doc.NotesController.getNote.id}", required = true)
+                @Parameter(description = "${doc.NoteController.getNote.id}", required = true)
                 @PathVariable("id") String id) {
                 Optional<Note> result = noteRepository.findById(id);
                 if (result.isPresent()) {
@@ -76,7 +76,7 @@ public class NoteController {
         )
         @DeleteMapping("/api/note/{id}")
         public void deleteNote(
-                @Parameter(description = "${doc.NotesController.deleteNote.id}", required = true)
+                @Parameter(description = "${doc.NoteController.deleteNote.id}", required = true)
                 @PathVariable String id) {
                 Optional<Note> match = noteRepository.findById(id);
                 match.ifPresent(noteRepository::delete);
