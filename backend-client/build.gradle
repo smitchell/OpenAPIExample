@@ -11,24 +11,46 @@ plugins {
 //	https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-gradle-plugin
 	id 'org.openapi.generator' version '5.0.1'
     id "de.undercouch.download" version "4.1.1"
+    id 'maven-publish'
 }
-// ./gradlew install -->  ~/.m2/repository/com/example/backend-client/0.0.1-SNAPSHOT/backend-client-0.0.1-SNAPSHOT.jar
-apply plugin: "maven"
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
+
+// ./gradlew build publishToMavenLocal -->  ~/.m2/repository/com/example/backend-client/0.0.1-SNAPSHOT/backend-client-0.0.1-SNAPSHOT.jar
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.
+        }
     }
 }
 
-repositories {
-    mavenCentral()
-    mavenLocal()
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'maven'
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+        mavenLocal()
+    }
 }
+
+//configurations {
+//    [apiElements, runtimeElements].each {
+//        it.outgoing.artifacts.removeIf {
+//            it.buildDependencies.getDependencies(null).contains(jar)
+//        }
+//        it.outgoing.artifact(bootJar)
+//    }
+//}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'

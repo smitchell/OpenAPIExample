@@ -1,0 +1,13 @@
+com/example/backend/client/ApiUtil.class
+com/example/backend/client/NoteApiController.class
+org/openapitools/configuration/OpenAPIDocumentationConfig.class
+com/example/backend/client/invoker/OpenAPI2SpringBoot$ExitException.class
+com/example/backend/client/invoker/RFC3339DateFormat.class
+com/example/backend/client/invoker/OpenAPI2SpringBoot.class
+org/openapitools/configuration/HomeController.class
+org/openapitools/configuration/OpenAPIDocumentationConfig$BasePathAwareRelativePathProvider.class
+com/example/backend/client/VersionApi.class
+com/example/backend/client/VersionApiController.class
+com/example/backend/client/NoteApi.class
+com/example/backend/client/invoker/OpenAPI2SpringBoot$1.class
+com/milan/example/backend/client/model/Note.class

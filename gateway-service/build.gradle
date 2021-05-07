@@ -43,6 +43,7 @@ dependencies {
 
     runtime('org.springframework.boot:spring-boot-devtools')
 	compileOnly 'org.projectlombok:lombok'
+//    compile 'com.example:backend-client:0.0.1-SNAPSHOT'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
 
