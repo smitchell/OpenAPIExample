@@ -1,0 +1,30 @@
+doc:
+  NoteController:
+    description: The NoteController API was created to work with Notes via REST
+    contact:
+      name: Steve Mitchell
+      url: https://smitchell.github.io
+      email: stevecmitchell@gmail.com
+    getVersion:
+      description: Returns the current API version
+      notes: Used to check current API version
+    addNote:
+      description: Adds a new Note.
+      notes: The note ID is automatically assigned.
+    deleteNote:
+      description: Deletes a note by id.
+      id: The UUID of the note to delete.
+      notes: If a note with the given ID is found it is deleted.
+    getNote:
+      description: Retrives a note by id.
+      id: The UUID of the note to retrieve.
+      notes: The note ID is in UUID format.
+
+  spring:
+    datasource:
+      url: jdbc:h2:mem:testdb
+      driverClassName: org.h2.Driver
+      username: sa
+      password: password
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
