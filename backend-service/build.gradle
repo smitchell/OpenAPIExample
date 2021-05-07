@@ -57,33 +57,17 @@ test {
     useJUnitPlatform()
 }
 
-asciidoctor {
-    sourceDir = file("${projectDir}/src/main/resources/static/openapi")
-}
-
-asciidoctorPdf {
-    sourceDir = file("${projectDir}/src/main/resources/static/openapi")
+// ./gradlew clean generateOpenApiDocs
+openApi {
+    outputDir.set(file("$projectDir/src/main/resources/static/docs/".toString()))
+    outputFileName.set("openapi.json")
+    waitTimeInSeconds.set(10)
 }
 
 openApiGenerate {
-    generatorName = "asciidoc"
-    inputSpec = "${projectDir}/src/main/resources/static/openapi/openapi.json"
-    outputDir = "${buildDir}/openapi"
+    generatorName = "java"
+    inputSpec = "$projectDir/src/main/resources/static/docs/openapi.json".toString()
+    outputDir = "$buildDir/generated".toString()
     validateSpec = true
 }
 
-task openApiJson(type: Test) {
-    group 'Documentation'
-    description 'Generate OpenAPI json document for OpenAPI 3.0'
-    useJUnitPlatform()
-    include '**/docs/*'
-}
-
-project.tasks['openApiGenerate'].dependsOn openApiJson
-asciidoctor.dependsOn project.tasks['openApiGenerate']
-asciidoctorPdf.dependsOn project.tasks['openApiGenerate']
-
-task docs(dependsOn: ['asciidoctor', 'asciidoctorPdf']) {
-    group 'Documentation'
-    description 'Generate html and PDF output for this API'
-}

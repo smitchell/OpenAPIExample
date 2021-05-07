@@ -37,7 +37,7 @@ public class OpenAPIDocumentationTest {
 
     @Test
     public void writeSwaggerJson() throws Exception {
-        String outputDir = System.getProperty("openapi.outputDir", "src/main/resources/static/openapi");
+        String outputDir = System.getProperty("openapi.outputDir", "src/main/resources/static/docs");
         String json = mockMvc
                 .perform(
                         MockMvcRequestBuilders.get("/v3/api-docs")
