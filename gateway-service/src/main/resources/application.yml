@@ -19,12 +19,5 @@ doc:
       description: Retrives a note by id.
       id: The UUID of the note to retrieve.
       notes: The note ID is in UUID format.
-
-  spring:
-    datasource:
-      url: jdbc:h2:mem:testdb
-      driverClassName: org.h2.Driver
-      username: sa
-      password: password
-    jpa:
-      database-platform: org.hibernate.dialect.H2Dialect
+server:
+  port: 8181
