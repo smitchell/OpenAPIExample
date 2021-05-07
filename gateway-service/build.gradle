@@ -58,13 +58,6 @@ test {
     useJUnitPlatform()
 }
 
-// ./gradlew clean generateOpenApiDocs
-openApi {
-    outputDir.set(file("$projectDir/src/main/resources/static/docs/".toString()))
-    outputFileName.set("openapi.json")
-    waitTimeInSeconds.set(10)
-}
-
 task downloadFile(type: Download) {
     src "https://raw.githubusercontent.com/smitchell/OpenAPIExample/main/backend-service/src/main/resources/static/docs/openapi.json"
     dest "$buildDir/backend-service-api.json".toString()
