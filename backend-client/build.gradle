@@ -12,6 +12,8 @@ plugins {
 	id 'org.openapi.generator' version '5.0.1'
     id "de.undercouch.download" version "4.1.1"
 }
+// ./gradlew install -->  ~/.m2/repository/com/example/backend-client/0.0.1-SNAPSHOT/backend-client-0.0.1-SNAPSHOT.jar
+apply plugin: "maven"
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -25,6 +27,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
