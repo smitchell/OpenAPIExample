@@ -41,7 +41,7 @@ public class NoteController {
         @Operation(
                 description = "${doc.NoteController.getVersion.description}"
         )
-        @GetMapping("/api/version")
+        @GetMapping("/version")
         public String getVersion() {
                 return "v1.0";
         }
@@ -49,7 +49,7 @@ public class NoteController {
         @Operation(
                 description = "${doc.NoteController.addNote.description}"
         )
-        @PostMapping("/api/note")
+        @PostMapping("/note")
         public Note addNote(@RequestBody(description="The note to be created.", required = true) final Note note) {
                 note.setId(UUID.randomUUID().toString());
                 return noteRepository.save(note);
@@ -58,7 +58,7 @@ public class NoteController {
         @Operation(
                 description = "${doc.NoteController.getNote.description}"
         )
-        @GetMapping("/api/note/{id}")
+        @GetMapping("/note/{id}")
         public Note getNote(
                 @Parameter(description = "${doc.NoteController.getNote.id}", required = true)
                 @PathVariable("id") String id) {
@@ -74,7 +74,7 @@ public class NoteController {
         @Operation(
                 description = "${doc.NoteController.deleteNote.description}"
         )
-        @DeleteMapping("/api/note/{id}")
+        @DeleteMapping("/note/{id}")
         public void deleteNote(
                 @Parameter(description = "${doc.NoteController.deleteNote.id}", required = true)
                 @PathVariable String id) {

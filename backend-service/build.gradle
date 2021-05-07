@@ -64,10 +64,4 @@ openApi {
     waitTimeInSeconds.set(10)
 }
 
-openApiGenerate {
-    generatorName = "java"
-    inputSpec = "$projectDir/src/main/resources/static/docs/openapi.json".toString()
-    outputDir = "$buildDir/generated".toString()
-    validateSpec = true
-}
 

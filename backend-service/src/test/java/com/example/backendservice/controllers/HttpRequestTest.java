@@ -19,7 +19,7 @@ public class HttpRequestTest {
 
     @Test
     public void versionShouldReturnVersionOne() {
-        String version = this.restTemplate.getForObject("http://localhost:" + port + "/api/version",
+        String version = this.restTemplate.getForObject("http://localhost:" + port + "/version",
                 String.class);
         assertThat(version, is(equalTo("v1.0")));
     }

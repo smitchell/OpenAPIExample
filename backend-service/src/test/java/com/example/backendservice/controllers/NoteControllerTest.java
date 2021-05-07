@@ -35,7 +35,7 @@ public class NoteControllerTest {
     @Test
     void versionShouldReturnVersionOne() throws Exception {
         when(noteController.getVersion()).thenReturn("V1.0");
-        this.mockMvc.perform(get("/api/version"))
+        this.mockMvc.perform(get("/version"))
                 .andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("V1.0")));
     }
@@ -50,7 +50,7 @@ public class NoteControllerTest {
 
         when(noteController.addNote(note)).thenReturn(note);
         ObjectMapper mapper = new ObjectMapper();
-        this.mockMvc.perform(post("/api/note")
+        this.mockMvc.perform(post("/note")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(mapper.writeValueAsString(note)))
                 .andDo(print())
@@ -65,7 +65,7 @@ public class NoteControllerTest {
         note.setName(RandomStringUtils.random(25, true, false));
         note.setDescription("Now is the time for all good men to come to the aid of their country.");
         when(noteController.getNote(id)).thenReturn(note);
-        this.mockMvc.perform(get("/api/note/" + id))
+        this.mockMvc.perform(get("/note/" + id))
                 .andDo(print())
                 .andExpect(status().is2xxSuccessful());;
     }
