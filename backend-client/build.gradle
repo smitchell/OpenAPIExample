@@ -24,7 +24,7 @@ sourceCompatibility = '11'
 publishing {
     publications {
         maven(MavenPublication) {
-            from components.
+            from components.java
         }
     }
 }
