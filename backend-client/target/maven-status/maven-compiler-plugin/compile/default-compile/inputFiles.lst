@@ -1,10 +1,3 @@
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/invoker/RFC3339DateFormat.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/VersionApi.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/NoteApiController.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/org/openapitools/configuration/OpenAPIDocumentationConfig.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/milan/example/backend/client/model/Note.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/org/openapitools/configuration/HomeController.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/VersionApiController.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/invoker/OpenAPI2SpringBoot.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/ApiUtil.java
-/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/NoteApi.java
+/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/api/ApiUtil.java
+/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/api/NoteApi.java
+/Users/stevemitchell/Development/fhlbdm/OpenAPIExample/backend-client/src/main/java/com/example/backend/client/model/Note.java

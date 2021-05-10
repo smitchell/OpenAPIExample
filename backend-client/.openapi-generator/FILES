@@ -1,13 +1,5 @@
 README.md
 pom.xml
-src/main/java/com/example/backend/client/ApiUtil.java
-src/main/java/com/example/backend/client/NoteApi.java
-src/main/java/com/example/backend/client/NoteApiController.java
-src/main/java/com/example/backend/client/VersionApi.java
-src/main/java/com/example/backend/client/VersionApiController.java
-src/main/java/com/example/backend/client/invoker/OpenAPI2SpringBoot.java
-src/main/java/com/example/backend/client/invoker/RFC3339DateFormat.java
-src/main/java/com/milan/example/backend/client/model/Note.java
-src/main/java/org/openapitools/configuration/HomeController.java
-src/main/java/org/openapitools/configuration/OpenAPIDocumentationConfig.java
-src/main/resources/application.properties
+src/main/java/com/example/backend/client/api/ApiUtil.java
+src/main/java/com/example/backend/client/api/NoteApi.java
+src/main/java/com/example/backend/client/model/Note.java

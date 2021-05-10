@@ -39,7 +39,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springdoc:springdoc-openapi-ui:1.5.3'
 	implementation 'io.swagger:swagger-core:1.6.2'
-    implementation 'com.example:backend-client:0.0.1-SNAPSHOT'
+    implementation 'com.example:backend-client:1.0'
 
     runtime('org.springframework.boot:spring-boot-devtools')
 	compileOnly 'org.projectlombok:lombok'

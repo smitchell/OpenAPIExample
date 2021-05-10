@@ -81,15 +81,25 @@ openApiGenerate {
     generatorName = "spring"
     inputSpec = "$buildDir/backend-service-api.json".toString()
     outputDir = "$projectDir".toString()
-    apiPackage = "com.example.backend.client"
-    invokerPackage = "com.example.backend.client.invoker"
-    modelPackage = "com.milan.example.backend.client.model"
-    configOptions =[
-            hideGenerationTimestamp: 'true', // remove @Generated annotations
-            java8: 'true',
-            dateLibrary: 'java8',
-            serializationLibrary   : "jackson",
-            useRuntimeException    : "true"
+    configOptions = [
+            useOptional          : "true",
+            swaggerDocketConfig  : "false",
+            performBeanValidation: "false",
+            useBeanValidation    : "false",
+            useTags              : "true",
+            singleContentTypes   : "true",
+            groupId             : "com.example",
+            basePackage          : "com.example.backend.client",
+            configPackage        : "com.example.backend.client",
+            title                : rootProject.name,
+            java8                : "false",
+            dateLibrary          : "java8",
+            serializableModel    : "true",
+            artifactId           : rootProject.name,
+            apiPackage           : "com.example.backend.client.api",
+            modelPackage         : "com.example.backend.client.model",
+            invokerPackage       : "com.example.backend.client.api",
+            interfaceOnly        : "true"
     ]
 }
 tasks.openApiGenerate.dependsOn tasks.downloadFile
