@@ -1,0 +1,109 @@
+openapi: 3.0.1
+info:
+  contact:
+    email: stevecmitchell@gmail.com
+    name: Steve Mitchell
+    url: https://smitchell.github.io
+  description: The NoteController API was created to work with Notes via REST
+  title: Notes REST API
+  version: "1.0"
+servers:
+- description: Generated server url
+  url: http://localhost:8080
+tags:
+- description: Note API
+  name: note
+paths:
+  /note:
+    post:
+      description: Adds a new Note.
+      operationId: addNote
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Note'
+        description: The note to be created.
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Note'
+          description: OK
+      tags:
+      - note
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /version:
+    get:
+      description: Returns the current API version
+      operationId: getVersion
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - note
+      x-accepts: '*/*'
+  /note/{id}:
+    delete:
+      description: Deletes a note by id.
+      operationId: deleteNote
+      parameters:
+      - description: The UUID of the note to delete.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - note
+      x-accepts: application/json
+    get:
+      description: Retrives a note by id.
+      operationId: getNote
+      parameters:
+      - description: The UUID of the note to retrieve.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Note'
+          description: OK
+      tags:
+      - note
+      x-accepts: '*/*'
+components:
+  schemas:
+    Note:
+      example:
+        name: name
+        description: description
+        id: id
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+      type: object
+
