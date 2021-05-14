@@ -61,7 +61,7 @@ test {
 }
 
 task downloadFile(type: Download) {
-    src "https://raw.githubusercontent.com/smitchell/OpenAPIExample/main/backend-service/src/main/resources/static/docs/openapi.json"
+    src "https://raw.githubusercontent.com/smitchell/OpenAPIExample/development/backend-service/src/main/resources/static/docs/openapi.json"
     dest "$buildDir/backend-service-api.json".toString()
     onlyIfModified true
     useETag true
