@@ -16,7 +16,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-05-10T14:34:28.169306-04:00[America/New_York]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-05-14T08:46:52.779-04:00[America/New_York]")
 @Api(value = "Note", description = "the Note API")
 public interface NoteApi {
 
